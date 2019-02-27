@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage3.master.cs" Inherits="MasterPage3" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+         *{
+            background-image:url('images/plane1.jpg');
+             background-size:cover; 
+            background-attachment:fixed;
+            color:white;
+            font-family:'Comic Sans MS',cursive,sans-serif;
+            
+        }
+          div.menu a{
+            color:white;
+            text-decoration:none;
+
+        }
+         .menu{
+            width: 100%;
+            padding: 20px;
+            position: fixed;
+            top: 0px;
+            text-align:center;
+            transition: .5s;
+            float:right;
+        }
+        .menu a{
+            color:black;
+            list-style-type:none;
+            display:inline-block;
+            padding:10px 40px;
+            font-size:20px;
+            font-family:'Comic Sans MS',cursive,sans-serif;
+            cursor:pointer;
+            border-radius:10px;
+            transition:.5s;
+        }
+        .menu a:hover{
+            background:orange;
+        }
+        
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="wapper">
+             <header>
+                             <asp:Image ID="Image1" runat="server" CssClass="auto-style1" style="Height:90px; Width:150px;" ImageUrl="~/images/icon.png"/>
+               <div class="menu">
+                               
+
+         
+           <a href="adminpassengerview.aspx">Veiw Passenger List</a>
+         
+           <a href="AdminLogin.aspx">Sign Out</a>
+          </div>
+    
+              
+       </header>
+
+         
+        
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

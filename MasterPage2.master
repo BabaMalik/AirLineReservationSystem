@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+   <style>
+
+        body{
+            background-image:url('images/plane1.jpg');
+             background-size:cover; 
+            background-attachment:fixed;
+            color:white;
+            font-family:'Comic Sans MS',cursive,sans-serif;
+          
+        }
+         div.menu a{
+            color:white;
+            text-decoration:none;
+
+        }
+         .menu{
+            width: 110%;
+            padding: 20px;
+            position: fixed;
+            top: 0px;
+            text-align:center;
+            transition: .5s;
+            float:left;
+            margin-left:180px
+        }
+        .menu a{
+            color:white;
+            list-style-type:none;
+            display:inline-block;
+            padding:5px 40px;
+            font-size:15px;
+            font-family:'Comic Sans MS',cursive,sans-serif;
+            cursor:pointer;
+            border-radius:10px;
+            transition:.5s;
+        }
+        .menu a:hover{
+            background:orange;
+        
+        }
+        
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+ 
+      <div class="wrapper">
+            <header>
+                            
+               <div class="menu" style="text-align:left;">
+                 
+                     <a href="Signed_in.aspx">FLIGHTS</a>
+           <a href="View_Reservation_status.aspx">VIEW RESERVATION STATUS</a>
+                     <a href="Cancelationticket.aspx">Cancel Ticket</a>
+           <a href="Account_info.aspx">ACCOUNT INFO</a>
+                      <a href="login.aspx">Sign Out</a>
+         
+               
+
+               </div>
+    
+              
+       </header>     
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+   </div>
+    </form>
+</body>
+</html>
